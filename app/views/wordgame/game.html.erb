@@ -1,0 +1,15 @@
+<h1><%= "*" * 6 + " Welcome to the longest word-game ! " + "*" * 6 %></h1>
+<h2>Here is your grid :</h2>
+<h2><%= @grid.join(" ")%></h2>
+<h1><%= "*" * 46 %> </h1>
+<h2>Pick wisely...What's your best shot ?</h2>
+
+<form action="/score">
+  <input type="hidden" name="start_time" value="<%= @start_time %>" >
+  <input type="hidden" name="grid" value="<%= @grid.join("") %>" >
+  <label for="question"></label>
+  <input type="text" id="question" name="wordanswer" placeholder="your answer here" autofocus>
+  <input type="submit" value="Let's roll the die!">
+</form>
+
+
